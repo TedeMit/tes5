@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html manifest="./cache.manifest">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+	<title>EXPLOIT HOST | DevilNot</title>
+<style>
+body{
+cursor: crosshair;
+}
+button{
+   cursor: crosshair; 
+}
+.md {
+width: 230px;
+height: 60px;
+cursor: crosshair;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin-top: 15px;
+margin-bottom: 5px;
+margin-left: 15px;
+margin-right: 5px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+}	
+.md1 {
+width: 230px;
+height: 60px;
+cursor: crosshair;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin-top: 15px;
+margin-bottom: 5px;
+margin-left: 1000px;
+margin-right: 5px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+}
+.boton {
+background-color: black;
+color: white;
+font-family: monospace;
+}
+
+.boton2{
+background-color: sandybrown;
+color: white;
+font-family: monospace;
+}
+
+.mj {
+width: 230px;
+height: 60px;
+cursor: crosshair;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin-top: 15px;
+margin-bottom: 5px;
+margin-left: 15px;
+margin-right: 5px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+}
+
+.boton1 {
+background-color: sandybrown;
+color: white;
+font-family: monospace;
+}
+
+.boton1:hover {
+background-color: black;
+color: white;
+}
+.boton2:hover {
+background-color: black;
+color: gold;
+}
+.boton:hover {
+background-color: black;
+color: white;
+}
+.firmware{
+    position:fixed;
+    color:#fff;
+    padding:0 10px;
+    bottom:10px;
+    right:0
+}
+</style>
+</head>
+	<Body background="Ps4.jpg"> 
+		<button onclick="testwebkit()">Check vulnerability</button>
+        <p id="API"></p>
+        <p id="WE"></p>
+	<body style="background-color:black;color:white;font-size:20px;text-align:center;">
+        <h1 style='font-size:40px;:0;'>DevilNot
+        <i><div id=mybuttons style=text-align:center>
+        <a href="./5.05.html"><button class="md boton1" onclick=hen()>5.05</button></a>
+        <a href="./7.5x/Mira/index.html"><button class="mj boton1" onclick=mir1()>6.72</button></a>
+        <br>
+        <br>
+        <a href="./7.5x/Mira/index.html"><button class="mj boton1" onclick=mir1()>7.02</button></a>
+        <a href="./7.5x.html"><button class="mj boton1" onclick=mir1()>7.5x</button></a><br><br><br><br><br>
+        <span style="color:#FFFFFF;font-family:Arial;font-size:18px;">Credits: @Mangek23, @Al Azif, @Rogero, @TheFlow</span>
+      </a>
+</body>
+</script><script src="./script.js"></script>
+<script>
+        function testwebkit() {
+            alert("THIS SITE IS A TEST FOR THE WEBKIT VULNERABILITY FOR THE PS4\nCLICK OK\nIF YOU DON'T SEE ANY 'API PATCHED' ERROR OR 'MEMORY ERROR' ALERT OR ANY ERROR ALERT THAT'S MEAN IT'S NOT PATCH");
+
+            CheckAPI();
+        }
+
+        function CheckAPI() {
+            try {
+                API();
+            }catch(e){
+                var ge = e.message;
+                if (ge == "The string did not match the expected pattern."){
+                    document.getElementById("API").innerHTML = "API not patch !\n";
+                } else if (ge == "Illegal constructor.") {
+                    document.getElementById("API").innerHTML = "API not implement !\n";
+                } else {
+                    document.getElementById("API").innerHTML = e.message;
+                }
+            }
+
+        }
+
+        function API() {
+            let font = new FontFace("font1", 'url()', {});
+
+            var fontFaceSet = new FontFaceSet([font]);
+
+            font.family = "font2";
+
+            document.getElementById("API").innerHTML = "API patched !\n";
+
+            CheckWE();
+
+        }
+
+        function CheckWE() {
+            let font = new FontFace("font1", '', {}, ConfirmWork());
+
+            var fontFaceSet = new FontFaceSet([font]);
+
+            font.family = "font2";
+
+            NotWork();
+
+        }
+
+        function ConfirmWork() {
+            //alert("Webkit Work !");
+            document.getElementById("WE").innerHTML = "Webkit vulnerability work !\n";
+            //go();
+        }
+
+        function NotWork() {
+            //alert("Webkit Patched here !");
+            document.getElementById("WE").innerHTML = "Webkit vulnerability not work !\n";
+        }
+    </script>
+</html>
